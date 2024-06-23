@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pustaka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-left: 200px; /* Adjust based on the sidebar width */
+        }
+        .references {
+            margin-top: 20px;
+        }
+        .references h2 {
+            margin-bottom: 15px;
+        }
+        .references ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .references li {
+            margin-bottom: 10px;
+        }
+        .references a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .references a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar-placeholder"></div>
+
+    <div class="content">
+        <h1>Daftar Pustaka</h1>
+        <!-- Content for Daftar Pustaka -->
+        <div class="references">
+            <ul>
+                <li><a href="https://yogyakarta.bps.go.id/publication/download.html?nrbvfeve=NDQ1NjAyMmIxOTIwOWRhZWEzNjFmYWFi&xzmn=aHR0cHM6Ly95b2d5YWthcnRhLmJwcy5nby5pZC9wdWJsaWNhdGlvbi8yMDE5LzExLzE1LzQ0NTYwMjJiMTkyMDlkYWVhMzYxZmFhYi9zdGF0aXN0aWstcG9saXRpay1kYW4ta2VhbWFuYW4tZGFlcmFoLWlzdGltZXdhLXlvZ3lha2FydGEtMjAxOC5odG1s&twoadfnoarfeauf=MjAyNC0wNi0xMCAxNDowNTo0NA%3D%3D" target="_blank">Statistik Politik dan Keamanan Daerah Istimewa Yogyakarta 2018</a></li>
+                <li><a href="https://bappeda.jogjaprov.go.id/dataku/data_dasar/cetak/552-aparat-dan-sarana-keamanan" target="_blank">Aparat dan Sarana Keamanan di Yogyakarta</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function loadSidebar() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-placeholder').innerHTML = data;
+                });
+        }
+        window.onload = loadSidebar;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

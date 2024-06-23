@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Menjamin konten di tengah pada layar kecil */
+            margin: 0; /* Menghilangkan margin bawaan */
+            padding: 0; /* Menghilangkan padding bawaan */
+        }
+        .content {
+            text-align: center;
+        }
+        .content h2 {
+            margin-top: 10vh; /* Jarak dari bagian atas (20% dari tinggi viewport) */
+            margin-bottom: 20vh; /* Jarak dari bagian bawah (20% dari tinggi viewport) */
+        }
+</style>
+<body> 
+    <div id="sidebar-placeholder"></div>
+
+    <div class="content">
+        <img src="https://i.ibb.co.com/NSqfVRB/technology.png" width="200" height="200">
+        <h2>Website Georgraphic Information System</h2>
+    </div>
+
+    <script>
+        function loadSidebar() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-placeholder').innerHTML = data;
+                });
+        }
+        window.onload = loadSidebar;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
